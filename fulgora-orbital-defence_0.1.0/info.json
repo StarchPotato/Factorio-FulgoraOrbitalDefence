@@ -1,0 +1,14 @@
+{
+  "name": "fulgora-orbital-defence",
+  "version": "0.1.0",
+  "factorio_version": "2.0",
+  "title": "Fulgora Orbital Defence",
+  "author": "Starchie",
+  "description": "Fulgora had an ancient civilisation.  Their planetary defence remains in orbit to welcome you.",
+  "dependencies":
+	[
+	"space-age",
+	"? Redrawn-Space-Connections",
+	"? redrawn-space-compat-fixes"
+	]
+}
