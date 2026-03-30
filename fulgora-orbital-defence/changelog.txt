@@ -1,0 +1,30 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.2.1
+Date: 27-mar-2026
+  Balancing:
+    - Added Fulgora defence robot remnant to coarse processing (20%)
+  Bugfixes:
+    - Added hibernation capsules to the local Fulgora planet asteroid list as well
+    - Deduplicated hibernation capsule definitions config files
+    - Normalised internal variable names for remnant asteroid chunks and items
+    - Added remnant to inserter filters with Fulgora route unlock
+---------------------------------------------------------------------------------------------------
+Version: 0.2.0
+Date: 23-mar-2026
+  Balancing:
+    - Removed steel and copper cable from coarse processing
+    - Coarse processing recipe icon updated to reflect new recipe results
+    - Changed precise processing to use recycler.  Technology for precise crushing is now unlocked with the Recycler
+    - Removed rocket turret from precise processing in favour of rockets to avoid trivialising carbon fiber on Gleba
+    - Boosted Thruster probability from 6.25% to 7.5%, in line with 1.5x scaling factor of platform components with precise processing
+    - Coarse processing is now unlocked with Planet discovery Fulgora technology, instead of Space platform
+    - Precise crushing is now unlocked with the Recycling technology, instead of Advanced asteroid processing
+  Locale:
+    - Updated all items and recipes to use sentence case instead of title case
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 23-mar-2026
+  Major Features:
+    - Initial Release
+    - New asteroid and enemy along routes to Fulgora
+    - Crushing recipes for coarse & precise remnant processing give space platform components
