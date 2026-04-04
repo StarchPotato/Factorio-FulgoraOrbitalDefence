@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.3
+Date: 04-apr-2026
+  Bugfixes:
+    - Added a check for space collection routes with no asteroids to exclude Fulgora Hibernation Pods (Dea-Dia System)
+---------------------------------------------------------------------------------------------------
 Version: 0.2.2
 Date: 30-mar-2026
   Bugfixes:
