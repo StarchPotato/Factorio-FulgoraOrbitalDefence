@@ -44,11 +44,11 @@ fulgoranspaceship.attack_parameters = {
         type = "projectile",
         use_shooter_direction = true
       }
-local destroyer = data.raw["combat-robot"]["destroyer"] -- Destroyer capsules look good
-fulgoranspaceship.idle = table.deepcopy(destroyer.idle)
-fulgoranspaceship.in_motion = table.deepcopy(destroyer.in_motion)
-fulgoranspaceship.shadow_idle = table.deepcopy(destroyer.shadow_idle)
-fulgoranspaceship.shadow_in_motion = table.deepcopy(destroyer.shadow_in_motion)
+local destroyer = table.deepcopy(data.raw["combat-robot"]["destroyer"]) -- Destroyer capsules look good
+fulgoranspaceship.idle = destroyer.idle
+fulgoranspaceship.in_motion = destroyer.in_motion
+fulgoranspaceship.shadow_idle = destroyer.shadow_idle
+fulgoranspaceship.shadow_in_motion = destroyer.shadow_in_motion
 fulgoranspaceship.dying_sound = {
   aggregation = {
     max_count = 3,
@@ -91,12 +91,35 @@ fulgoranspaceship.run_animation = {
 }
 fulgoranspaceship.attack_parameters.animation = table.deepcopy(data.raw["spider-unit"]["small-strafer-pentapod"].graphics_set.animation) -- Strafer attacks look good
 fulgoranspaceship.dying_trigger_effect = {
-        {
-          entity_name = "carbonic-asteroid-explosion-2",
-          only_when_visible = true,
-          type = "create-explosion"
-        }
-      }
+  {
+    entity_name = "carbonic-asteroid-explosion-2",
+    only_when_visible = true,
+    type = "create-explosion"
+  }
+}
+
+fulgoranspaceship.factoriopedia_simulation = {
+  init = [[
+	game.simulation.camera_zoom = 1.8
+    game.simulation.camera_position = {0, 0}
+    for x = -40, 40, 1 do
+      for y = -40, 40 do
+        game.surfaces[1].set_tiles{{position = {x, y}, name = "empty-space"}}
+      end
+    end
+    enemy = game.surfaces[1].create_entity{name = "fulgoran-spaceship", position = {0, 0}}
+
+    step_0 = function()
+      game.simulation.camera_position = {enemy.position.x, enemy.position.y - 0.5}
+      script.on_nth_tick(1, function()
+          step_0()
+      end)
+    end
+
+    step_0()
+  ]]
+}
+
 data:extend({ fulgoranspaceship })
 --TODO: factoriopedia entry
 
@@ -151,6 +174,40 @@ fulgoranhibernationcapsule.dying_trigger_effect = { -- Required to generate chun
     type = "create-explosion"
   }
 }
+
+fulgoranhibernationcapsule.factoriopedia_simulation = {
+  init = [[
+  require("__core__/lualib/story")
+  game.simulation.camera_position = {0,0}
+    for x = -8, 8, 1 do
+      for y = -3, 3 do
+        game.surfaces[1].set_tiles{{position = {x, y}, name = "empty-space"}}
+      end
+    end
+
+    for x = -1, 0, 1 do
+      for y = -1, 0 do
+        game.surfaces[1].set_chunk_generated_status({x, y}, defines.chunk_generated_status.entities)
+      end
+    end
+
+    local story_table =
+    {
+      {
+        {
+          name = "start",
+          action = function() game.surfaces[1].create_entity{name="fulgoran-hibernation-capsule", position = {0, 0}, velocity = {0, 0.011}} end
+        },
+        {
+          condition = story_elapsed_check(7),
+          action = function() story_jump_to(storage.story, "start") end
+        }
+      }
+    }
+    tip_story_init(story_table)
+  ]]
+}
+
 data:extend({ fulgoranhibernationcapsule })
 --TODO: factoriopedia entry
 
