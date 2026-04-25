@@ -17,8 +17,20 @@ fulgoranspaceship.resistances = { --Vulnerable to lasers/electricity, but somewh
   { decrease = 0,  percent = 10, type = "laser"},
   { decrease = 0,  percent = 0,  type = "electric"},  -- Use Fulgora to defeat Fulgora
 }
+data:extend({  -- To avoid showing up as a player explosive bonus
+  {
+    type = "ammo-category",
+    name = "fulgoran-spaceship-rocket",
+    bonus_gui_order = "uf",
+    icon = "__base__/graphics/icons/ammo-category/rocket.png",
+    icon_size = 64,
+    subgroup = "ammo-category",
+	hidden = true,
+	hidden_in_factoriopedia = true, -- Do not show in factoriopedia, just like with biters/spitters.  Entry has been defined just in case it is ever visible through alternative means.
+  }
+})
 fulgoranspaceship.attack_parameters = {
-        ammo_category = "rocket",
+        ammo_category = "fulgoran-spaceship-rocket",
         ammo_type = {
           action = {
             action_delivery = {

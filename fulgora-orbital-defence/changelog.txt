@@ -1,9 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.5
+Date: 25-apr-2026
+  Bugfixes:
+    - Changed ammo category from rocket to fulgora-enemy-rocket, to avoid any explosive research bonuses when sharing a force (also cleans up tech UI
+---------------------------------------------------------------------------------------------------
 Version: 0.2.4
 Date: 18-apr-2026
   Bugfixes:
     - Replaced factoriopedia simulations for both the Fulgora Hibernation Pods and Fulgoran Spaceships
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
 Version: 0.2.3
 Date: 04-apr-2026
   Bugfixes:
