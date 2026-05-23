@@ -1,0 +1,26 @@
+{
+  "entity":
+  [
+    ["fulgoran-hibernation-capsule","fod-fulgoran-hibernation-capsule"],
+    ["fulgoran-spaceship","fod-fulgoran-spaceship"],
+	["fulgoran-spaceship-corpse","fod-fulgoran-spaceship-corpse"],
+	["fulgoran-spaceship-corpse-chunk","fod-fulgoran-spaceship-corpse-chunk"]
+  ],
+  "item":
+  [
+	["fulgoran-spaceship-corpse-chunk","fod-fulgoran-spaceship-corpse-chunk"]
+  ],
+  "recipe":
+  [
+	["fulgoran-spaceship-corpse-chunk-crushing","fod-fulgoran-spaceship-corpse-chunk-crushing"],
+	["fulgoran-spaceship-corpse-chunk-recycling","fod-fulgoran-spaceship-corpse-chunk-recycling"]
+  ],
+  "asteroid-chunk":
+  [
+	["fulgoran-spaceship-corpse-chunk","fod-fulgoran-spaceship-corpse-chunk"]
+  ],
+  "ammo-category":
+  [
+	["fulgoran-spaceship-rocket","fod-fulgoran-spaceship-rocket"]
+  ]
+}

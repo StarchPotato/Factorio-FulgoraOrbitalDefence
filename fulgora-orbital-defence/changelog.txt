@@ -1,8 +1,22 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 24-may-2026
+  Major Features:
+    - New space location Fulgoran space manufactory - this introduced a PlanetsLib dependancy for satellite orbit management
+    - New technology to let the player craft Fulgora robot defence capsules
+  Minor Features:
+    - Addition of hidden, placeable off-grid, invisible roboport, infinity chest, inserter, construction bot, and power source.  Used for Fulgoran space manufactory simulation.
+  Graphics:
+    - Changed the Fulgora defence robot to use a custom sprite
+    - Changed the Fulgora hibernation pod to use a custom sprite
+  Changes:
+    - Refactored code into submodules for ease of maintenance
+    - Updated all internal variables to use "fod" prefix to avoid potential conflicts.
+---------------------------------------------------------------------------------------------------
 Version: 0.2.5
 Date: 25-apr-2026
   Bugfixes:
-    - Changed ammo category from rocket to fulgora-enemy-rocket, to avoid any explosive research bonuses when sharing a force (also cleans up tech UI
+    - Changed ammo category from rocket to fulgora-enemy-rocket, to avoid any explosive research bonuses when sharing a force (also cleans up tech UI)
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.4
 Date: 18-apr-2026

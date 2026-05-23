@@ -1,6 +1,6 @@
 {
   "name": "fulgora-orbital-defence",
-  "version": "0.2.5",
+  "version": "1.0.0",
   "factorio_version": "2.0",
   "title": "Fulgora Orbital Defence",
   "author": "Starchie",
@@ -8,7 +8,9 @@
   "dependencies":
 	[
 	"space-age",
+	"PlanetsLib",
 	"? Redrawn-Space-Connections",
-	"? redrawn-space-compat-fixes"
+	"? redrawn-space-compat-fixes",
+	"? visible-planets"
 	]
 }
