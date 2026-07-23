@@ -1,4 +1,36 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 26-jun-2026
+  Compatibility:
+    - Updated recipies for Factorio 2.1 (recipe categories, independent_probability)
+    - Updated space manufactory build scipt for Factorio 2.1 (mineable > mineable_flag)
+---------------------------------------------------------------------------------------------------
+Version: 1.0.4
+Date: 15-jun-2026
+  Bugfixes:
+    - Added the space age tag, not just the dependancy
+    - Forcibly set the picture property for Fulgora defence robot remnant item, in addition to astoid chunk.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.3
+Date: 10-jun-2026
+  Balancing:
+    - Resized space location to be smaller than Cerys and other planets
+    - Rotated planet location to be to the right of Fulgora
+    - Reduced the distance to Fulgora to orbit closer like Cerys
+---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+Date: 07-jun-2026
+  Bugfixes:
+    - Fixed typo in technology hub (destructable -> destructible)  (Thanks SkunkMaster!)
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 30-may-2026
+  Bugfixes:
+    - Fixed the sprite technology size to corrected value, resolving HR graphics crash issues (Thanks SkunkMaster!)
+    - Correctly set solar power on surface and space location to that of Fulgora space location, instead of the default 1%
+  Scripting:
+    - Added in new command /fod_buildmanufactory to regenerate the surface in case of creation errors
+---------------------------------------------------------------------------------------------------
 Version: 1.0.0
 Date: 24-may-2026
   Major Features:

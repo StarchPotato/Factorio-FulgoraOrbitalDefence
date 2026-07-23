@@ -2,6 +2,7 @@
 local fulgoranhibernationcapsule = table.deepcopy(data.raw["asteroid"]["small-metallic-asteroid"])
 fulgoranhibernationcapsule.name = "fod-fulgoran-hibernation-capsule"
 fulgoranhibernationcapsule.icon = "__fulgora-orbital-defence__/graphics/icons/fulgoran-hibernation-capsule-icon.png"
+fulgoranhibernationcapsule.icon_size = 64
 fulgoranhibernationcapsule.mass = 1.0 -- negligible platform damage on impact
 fulgoranhibernationcapsule.overkill_fraction = 0.0 -- internal bots are fine.  Don't think this does anything, as enemy spawning is handled by control script
 fulgoranhibernationcapsule.graphics_set = { -- Mostly lifted from data.lua for asteroids

@@ -3,7 +3,7 @@ data:extend({
   {
     type = "recipe",
     name = "fod-fulgoran-spaceship-corpse-chunk-crushing",
-    category = "crushing",
+    categories = {"crushing"},
 	subgroup = "space-crushing",
 	order = "b-a-d",
     energy_required = 2,
@@ -13,14 +13,14 @@ data:extend({
       { type = "item", name = "fod-fulgoran-spaceship-corpse-chunk", amount = 1 }
     },
     results = { -- Do not want to trivialise part construction, but still be common enough that a platform over fulgora would get it
-      { type = "item", name = "space-platform-foundation", amount = 3, probability = 0.2 },
-	  { type = "item", name = "electronic-circuit", amount = 5, probability = 0.15 },
-	  { type = "item", name = "advanced-circuit", amount = 5, probability = 0.01 },
-	  { type = "item", name = "asteroid-collector", amount = 1, probability = 0.01},
-	  { type = "item", name = "thruster", amount = 1, probability = 0.05},
-	  { type = "item", name = "crusher", amount = 1, probability = 0.02},
-	  { type = "item", name = "cargo-bay", amount = 1, probability = 0.01},
-	  { type = "item", name = "fod-fulgoran-spaceship-corpse-chunk", amount = 1, probability = 0.2 } -- Return base component, like other asteroid crushing
+      { type = "item", name = "space-platform-foundation", amount = 3, independent_probability = 0.2 },
+	  { type = "item", name = "electronic-circuit", amount = 5, independent_probability = 0.15 },
+	  { type = "item", name = "advanced-circuit", amount = 5, independent_probability = 0.01 },
+	  { type = "item", name = "asteroid-collector", amount = 1, independent_probability = 0.01},
+	  { type = "item", name = "thruster", amount = 1, independent_probability = 0.05},
+	  { type = "item", name = "crusher", amount = 1, independent_probability = 0.02},
+	  { type = "item", name = "cargo-bay", amount = 1, independent_probability = 0.01},
+	  { type = "item", name = "fod-fulgoran-spaceship-corpse-chunk", amount = 1, independent_probability = 0.2 } -- Return base component, like other asteroid crushing
     }
   }
 })
@@ -29,7 +29,7 @@ data:extend({
   {
     type = "recipe",
     name = "fod-fulgoran-spaceship-corpse-chunk-recycling",
-    category = "recycling",
+    categories = {"recycling"},
 	auto_recycle = false,
 	enabled = false,
 	subgroup = "space-crushing",
@@ -41,15 +41,15 @@ data:extend({
       { type = "item", name = "fod-fulgoran-spaceship-corpse-chunk", amount = 1 }
     },
     results = { -- 50% more useful space platform parts, just no platform foundation or basic circuits
-	  { type = "item", name = "rocket", amount = 5, probability = 0.2}, -- Yes, this is 1 per recycle on average, but it keeps everything probabalistic
-	  { type = "item", name = "asteroid-collector", amount = 1, probability = 0.015},
-	  { type = "item", name = "thruster", amount = 1, probability = 0.075},
-	  { type = "item", name = "crusher", amount = 1, probability = 0.03},
-	  { type = "item", name = "cargo-bay", amount = 1, probability = 0.015},
-	  --{ type = "item", name = "rocket-turret", amount = 1, probability = 0.01}, -- Behind Gleba research, but still allows not continuing the production
-	  { type = "item", name = "advanced-circuit", amount = 5, probability = 0.05 }, -- Better circuits for advanced processing
-	  { type = "item", name = "processing-unit", amount = 5, probability = 0.01 },
-	  { type = "item", name = "holmium-ore", amount = 1, probability = 0.01} -- Trace holmium not enough to be useful, just to be some ironic waste
+	  { type = "item", name = "rocket", amount = 5, independent_probability = 0.2}, -- Yes, this is 1 per recycle on average, but it keeps everything probabalistic
+	  { type = "item", name = "asteroid-collector", amount = 1, independent_probability = 0.015},
+	  { type = "item", name = "thruster", amount = 1, independent_probability = 0.075},
+	  { type = "item", name = "crusher", amount = 1, independent_probability = 0.03},
+	  { type = "item", name = "cargo-bay", amount = 1, independent_probability = 0.015},
+	  --{ type = "item", name = "rocket-turret", amount = 1, independent_probability = 0.01}, -- Behind Gleba research, but still allows not continuing the production
+	  { type = "item", name = "advanced-circuit", amount = 5, independent_probability = 0.05 }, -- Better circuits for advanced processing
+	  { type = "item", name = "processing-unit", amount = 5, independent_probability = 0.01 },
+	  { type = "item", name = "holmium-ore", amount = 1, independent_probability = 0.01} -- Trace holmium not enough to be useful, just to be some ironic waste
 
     }
   }
@@ -59,7 +59,7 @@ data:extend({
   {
     type = "recipe",
     name = "fod-fulgoran-spaceship-capsule",
-    category = "electromagnetics",
+    categories = {"electromagnetics"},
 	auto_recycle = false,
 	enabled = false,
 	subgroup = "military-equipment",
@@ -92,7 +92,7 @@ data:extend({
     enabled = true,
     hidden = true,
     hide_from_player_crafting = true,
-    category = "fod-cargo-pod-silo",
+    categories = {"fod-cargo-pod-silo"},
 	surface_condition = {{"Pressure", min = 0, max = 0}}, -- Not a valid recipe for any rocket silo, which need >1 hPa Pressure.  Used to lock it to here
     energy_required = 1,
     ingredients = {}, -- Free!

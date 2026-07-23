@@ -54,7 +54,7 @@ data:extend({
     type = "technology",
     name = "fod-fulgoran-spaceship-capsule-research",
     icon = "__fulgora-orbital-defence__/graphics/icons/fulgoran-hibernation-capsule-icon.png",
-    icon_size = 256,
+    icon_size = 64,
     effects = {
 		{
         type = "unlock-recipe",

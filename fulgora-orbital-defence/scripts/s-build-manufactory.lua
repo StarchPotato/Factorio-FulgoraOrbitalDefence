@@ -143,7 +143,7 @@ function build.build_manufactory()
 		if entity.valid then
 			if entity.name == "fod-tech-hub" or entity.name == "fod-cargo-pod-launcher" then
 				entity.destructible = false   -- Cannot be destroyed
-				entity.minable = false        -- Cannot be mined
+				entity.minable_flag = false   -- Cannot be mined
 				entity.rotatable = false      -- Cannot be rotated with 'R'
 			end
 		end

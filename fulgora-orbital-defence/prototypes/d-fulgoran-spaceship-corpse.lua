@@ -4,9 +4,9 @@ fulgoranspaceshipcorpsechunk.name = "fod-fulgoran-spaceship-corpse-chunk"
 fulgoranspaceshipcorpsechunk.icon = "__space-age__/graphics/icons/scrap-4.png"
 fulgoranspaceshipcorpsechunk.pictures = {
   {
-    filename = "__space-age__/graphics/icons/scrap.png",
+    filename = "__space-age__/graphics/icons/scrap-4.png",
     size = 64,
-    scale = 0.5,
+    scale = 0.5
   }
 }
 fulgoranspaceshipcorpsechunk.minable = {
@@ -60,8 +60,14 @@ lights = {
 
 data:extend({ fulgoranspaceshipcorpsechunk })
 --The chunk is also an item, with the same name in vanilla.  No idea how this doesn't conflict, so just make it _2
-local fulgoranspaceshipcorpsechunk = table.deepcopy(data.raw["item"]["metallic-asteroid-chunk"])
-fulgoranspaceshipcorpsechunk.icon = "__space-age__/graphics/icons/scrap-4.png"
-fulgoranspaceshipcorpsechunk.name = "fod-fulgoran-spaceship-corpse-chunk"
-
-data:extend({ fulgoranspaceshipcorpsechunk })
+local fulgoranspaceshipcorpsechunkitem = table.deepcopy(data.raw["item"]["metallic-asteroid-chunk"])
+fulgoranspaceshipcorpsechunkitem.icon = "__space-age__/graphics/icons/scrap-4.png"
+fulgoranspaceshipcorpsechunkitem.name = "fod-fulgoran-spaceship-corpse-chunk"
+fulgoranspaceshipcorpsechunkitem.pictures = {
+  {
+    filename = "__space-age__/graphics/icons/scrap-4.png",
+    size = 64,
+    scale = 0.5
+  }
+}
+data:extend({ fulgoranspaceshipcorpsechunkitem })

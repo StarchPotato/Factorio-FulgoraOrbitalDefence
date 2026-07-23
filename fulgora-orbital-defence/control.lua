@@ -113,7 +113,7 @@ script.on_nth_tick(60, function(event)
                     if storage.proximity_timers[p_idx] >= 30 then
                         tech.enabled = true
                         player.force.script_trigger_research(tech_name)
-						hub.destructable =  true -- you can destroy it after completing the research.  Good luck to any other forces that want to research it
+						hub.destructible =  true -- you can destroy it after completing the research.  Good luck to any other forces that want to research it
                         -- No need to count when researched
                         storage.proximity_timers[p_idx] = nil
                     end
@@ -125,6 +125,24 @@ script.on_nth_tick(60, function(event)
         end
     end
 end)
+
+commands.add_command("fod_buildmanufactory", "Regenerates the Fulgoran Space Manufactory location in case it was corrupted.  Reequires admin permissions to run", function(event)
+    -- Admin permission check
+    local player = event.player_index and game.players[event.player_index]
+    if player and not player.admin then
+        player.print("Must be admin to regenerate manufactory location")
+		return
+    end
+	-- Drop current surface if it was malformed
+	local surface = game.surfaces["fulgoran-space-manufactory"]
+	if surface then game.delete_surface(surface) end
+	-- Run standard build logic, as this assumes no surface
+	script.on_event(defines.events.on_surface_deleted, function(event)
+		build.build_manufactory()
+		end
+		)
+	end
+)
 
 -- Set the spawn position for a surface.  Should not be needed with spawn defined
 -- script.on_event(defines.events.on_player_changed_surface, function(event)
